@@ -16,11 +16,11 @@ class CreatePharmaciesTable extends Migration
         Schema::create('pharmacies', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->string('patente')->unique();
-            $table->string('ice')->unique();
-            $table->string('i_f')->unique();
+            $table->string('patente');
+            $table->string('ice');
+            $table->string('i_f');
             $table->string('Num_autorisation')->nullable();
-            $table->string('rc')->unique();
+            $table->string('rc');
             $table->string('adresse')->nullable();
             $table->string('nom_pharmacien')->nullable();
             $table->string('contact')->nullable();
@@ -35,6 +35,7 @@ class CreatePharmaciesTable extends Migration
 
             $table->boolean('statu')->default(0);
             $table->boolean('bloque')->default(0);
+            $table->softDeletes();
             $table->foreignId('user_id');
             $table->timestamps();
         });
