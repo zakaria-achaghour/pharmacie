@@ -1,0 +1,8 @@
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    background-color:rgb(255, 147, 6);
+}
+
+.chnage-bg .active a,
+.chnage-bg .active a:hover {
+    background-color: red;
+}

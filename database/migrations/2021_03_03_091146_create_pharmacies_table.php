@@ -18,23 +18,25 @@ class CreatePharmaciesTable extends Migration
             $table->string('nom');
             $table->string('patente');
             $table->string('ice');
-            $table->string('i_f');
-            $table->string('Num_autorisation')->nullable();
+            $table->string('if');
+            $table->string('num_autorisation')->nullable();
             $table->string('rc');
-            $table->string('adresse')->nullable();
+
             $table->string('nom_pharmacien')->nullable();
             $table->string('contact')->nullable();
             $table->string('cin_pharmacien')->nullable();
 
-            $table->string('nom_fichier')->nullable();
+
+            $table->string('fichier')->nullable();
             $table->boolean('fichier_cin');
             $table->boolean('fichier_diplome');
             $table->boolean('fichier_autorisation');
             $table->boolean('fichier_rc_patent');
             $table->boolean('fichier_if_ice');
-
-            $table->boolean('statu')->default(0);
+           
             $table->boolean('bloque')->default(0);
+
+            
             $table->softDeletes();
             $table->foreignId('user_id');
             $table->timestamps();

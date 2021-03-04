@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('users','UserController');
+/*Route::get('users/archive','UserController@archive')->name('archive');
+Route::get('users/all','UserController@archive')->name('archive');
+*/
+Route::resource('pharmacies','PharmacieController');
+
+Route::resource('villes','VilleController');
+
+
+
